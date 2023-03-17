@@ -1,4 +1,4 @@
-function EdadesAleatorias(cantidadEdades){
+let EdadesAleatorias = cantidadEdades => {
     let edades = []
     let max = 50
     for(let i = 0; i < cantidadEdades; i++){
@@ -7,14 +7,14 @@ function EdadesAleatorias(cantidadEdades){
     return edades
 }
 
-function OrganizarEdades(edadesACalificar){
+let OrganizarEdades = edadesACalificar => {
     edadesACalificar.sort(function(a, b) {
-        return b - a
+        return b - a;
     })
     return edadesACalificar
 }
 
-function EdadesRepetidas(edadesOrganizadas) {
+let EdadesRepetidas = edadesOrganizadas => {
     if (edadesOrganizadas[0] === edadesOrganizadas[1]) {
       let repeticiones = 2
       for (let i = 2; i < edadesOrganizadas.length; i++) {
@@ -28,7 +28,7 @@ function EdadesRepetidas(edadesOrganizadas) {
     } else {
       return 0
     }
-}
+  }
 
 let edadMayor = OrganizarEdades(EdadesAleatorias(10))
 let edadMayorRepetida = EdadesRepetidas(edadMayor)
